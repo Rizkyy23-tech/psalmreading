@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+nav {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%),
+    rgba(9,9,121,1) 35%,
+    rgb(7,106,126) 100%;
+    background-color: #0082eb;
+
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 50px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+   float: right;
+   margin-right: 10px;
+}
+
+nav ul li {
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 30px;
+    padding: 7px 13px;
+    flex-direction: row;
+
+}
+
+a.active,a:hover{
+    color: #ffffff;
+    font-weight: 100%;
+    background: linear-gradient(90deg, rgba(2,0,2,0.21)40%,
+    rgba(0,242,252,0.238)100%);
+
+    transition: .5s;
+    box-shadow: 1px, 1px, 1px, 1px
+    rgba(2,2,92,0.354);
+}
+
+.chckbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+section{
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+@media(max-width: 880px) {
+    .navbar {
+        backdrop-filter: none;
+    }
+
+
+    nav ul li a {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 150px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+}
+
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-wdith:1070px) {
+    .chckbtn{
+        display: block;
+    }
+    ul{
+    position: fixed;
+    width: 100px;
+    height: 100vh;
+    background: #000000b6;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 5.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082eb;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+a {
+ position: relative;
+ cursor: pointer;
+ color: black;
+ font-size: 29px;
+ padding: 0.5rem, 1rem;
+ transition: color 0.25s;
+}
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+a:hover {
+    color: black;
+}
+a:hover::after {
+    scale: 1 1;
+}
+
+div.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    justify-content: center;
+}
+a {
+ position: relative;
+ cursor: pointer;
+ color: aliceblue;
+ font-size: 29px;
+ padding: 0.5rem, 1rem;
+ transition: color 0.25s;
+}
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+a:hover {
+    color: black;
+}
+a:hover::after {
+    scale: 1 1;
+}
+
+image.row {
+    display: flex;
+    gap: 10px;
+}
+.image-row img {
+    height: 300px;
+    width: 300px;
+    justify-content: space-evenly;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+div.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    justify-content: center;
+}
+div:hover {
+     position: relative;
+ cursor: pointer;
+ color: aliceblue;
+ font-size: 60px;
+ padding: 0.5rem, 1rem;
+ transition: color 0.25s;
+}
+
+a {
+ position: relative;
+ cursor: pointer;
+ color: aliceblue;
+ font-size: 60px;
+ padding: 0.5rem, 1rem;
+ transition: color 0.25s;
+}
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: transparent;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+a:hover {
+    color: black;
+}
+a:hover::after {
+    scale: 1 1;
+}
+a:hover:active{
+    background-color: blue;
+}
+
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        
+
